@@ -1,0 +1,13 @@
+version: "3.8"
+
+services:
+  go_api:
+    container_name: go_api
+    build:
+      dockerfile: Dockerfile
+      context: .
+      target: development
+    volumes:
+      - .:/project
+    ports:
+      - "3000:3000"
